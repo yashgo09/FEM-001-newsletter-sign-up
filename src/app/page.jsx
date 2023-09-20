@@ -1,3 +1,21 @@
 export default function Page() {
-  return <h1>Nothing</h1>;
+  return (
+    <main>
+      <div className="image"></div>
+      <div className="content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul className="benefits">
+          <li className="benefits__item">Product discovery and building what matters</li>
+          <li className="benefits__item">Measuring to ensure updates are a success</li>
+          <li className="benefits__item">And much more!</li>
+        </ul>
+        <div className="email-input">
+          <label htmlFor="email">Email address</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </div>
+    </main>
+  );
 }
