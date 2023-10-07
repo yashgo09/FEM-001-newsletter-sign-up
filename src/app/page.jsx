@@ -24,5 +24,17 @@ export default function Page() {
         <button type="submit">Subscribe to monthly newsletter</button>
       </div>
     </main>
+    // <div className="container">
+    //   <div className="image-container"></div>
+    //   <div className="text-container">
+    //     <h1>Stay updated!</h1>
+    //     <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    //     <ul className="newsletter-benefits">
+    //       <li className="newletter-benefits__item">Product discovery and building what matters</li>
+    //       <li className="newletter-benefits__item">Measuring to ensure updates are a success</li>
+    //       <li className="newletter-benefits__item">And much more!</li>
+    //     </ul>
+    //   </div>
+    // </div>
   );
 }
