@@ -1,7 +1,14 @@
+import Image from "next/image";
+import illustrationImg from "../../public/illustration-sign-up-mobile.svg";
+import illustrationImgDesktop from "../../public/illustration-sign-up-desktop.svg";
+
 export default function Page() {
   return (
     <main>
-      <div className="image"></div>
+      <div className="image">
+        <Image src={illustrationImg} />
+        {/* <Image src={illustrationImgDesktop} /> */}
+      </div>
       <div className="content">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
