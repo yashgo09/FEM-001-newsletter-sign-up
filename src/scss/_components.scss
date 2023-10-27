@@ -1,3 +1,7 @@
+.content__para {
+  color: var(--clr-neutral-900);
+}
+
 .benefits {
   padding: 0;
   list-style: none;
@@ -6,7 +10,8 @@
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    margin-block-end: 1rem;
+    margin-block-end: 0.2rem;
+    color: var(--clr-neutral-900);
 
     // Custom list style image
     &::before {
@@ -33,6 +38,25 @@
     padding: 0.8rem 1.2rem;
     width: 100%;
     border: 1px solid var(--clr-neutral-500);
-    border-radius: 8px;
+    border-radius: 6px;
+  }
+}
+
+.image__mobile {
+  width: 100%;
+}
+
+.image__desktop {
+  width: 100%;
+  display: none;
+}
+
+@media (min-width: 60rem) {
+  .image__mobile {
+    display: none;
+  }
+
+  .image__desktop {
+    display: block;
   }
 }

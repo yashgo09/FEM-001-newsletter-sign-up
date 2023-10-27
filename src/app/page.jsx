@@ -5,13 +5,13 @@ import illustrationImgDesktop from "../../public/illustration-sign-up-desktop.sv
 export default function Page() {
   return (
     <main>
-      {/* <div className="image"> */}
-      <Image src={illustrationImg} alt="Newsletter Image" className="illustration" />
-      {/* <Image src={illustrationImgDesktop} /> */}
-      {/* </div> */}
+      <div className="image">
+        <Image className="image__mobile" src={illustrationImg} alt="Sign Up Illustration" />
+        <Image className="image__desktop" src={illustrationImgDesktop} alt="Sign Up Illustration" />
+      </div>
       <div className="content">
         <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <p className="content__para">Join 60,000+ product managers receiving monthly updates on:</p>
         <ul className="benefits">
           <li className="benefits__item">Product discovery and building what matters</li>
           <li className="benefits__item">Measuring to ensure updates are a success</li>

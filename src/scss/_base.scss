@@ -7,10 +7,15 @@
   --clr-neutral-900: hsl(234, 29%, 20%);
 
   --fs-300: 0.8rem;
-  --fs-400: 1rem;
-  --fs-900: 2.5rem;
+  --fs-400: 0.9rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3rem;
 
-  --fs-heading: var(--fs-900);
+  --fs-heading: var(--fs-800);
+
+  @media (min-width: 60rem) {
+    --fs-heading: var(--fs-900);
+  }
 
   --fw-regular: 400;
   --fw-bold: 700;
@@ -27,6 +32,13 @@ body {
   margin: 0;
   line-height: 1.5;
   font-size: var(--fs-400);
+
+  @media (min-width: 60rem) {
+    background-color: var(--clr-neutral-800);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
 }
 
 img {
@@ -34,17 +46,7 @@ img {
   max-width: 100%;
   width: auto;
   height: auto;
-}
-
-h1 {
-  color: var(--clr-neutral-900);
-  font-size: var(--fs-heading);
-  margin-block-start: 0;
-}
-
-button,
-input {
-  font: inherit;
+  object-fit: cover;
 }
 
 h1,
@@ -53,10 +55,25 @@ h3 {
   line-height: 1.1;
 }
 
+h1 {
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-heading);
+  margin-block-start: 0;
+
+  @media (min-width: 60rem) {
+    line-height: 0.6;
+  }
+}
+
+button,
+input {
+  font: inherit;
+}
+
 .btn {
   padding: 0.8rem 1.2rem;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
   background-color: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
