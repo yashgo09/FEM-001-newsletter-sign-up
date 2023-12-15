@@ -58,11 +58,7 @@ h3 {
 h1 {
   color: var(--clr-neutral-900);
   font-size: var(--fs-heading);
-  margin-block-start: 0;
-
-  @media (min-width: 60rem) {
-    line-height: 0.6;
-  }
+  margin-block: 0 0.5em;
 }
 
 button,
@@ -75,13 +71,20 @@ input {
   text-align: center;
   border-radius: 6px;
   border: none;
-  background-color: var(--clr-neutral-900);
+  background: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
   cursor: pointer;
   width: 100%;
+  transition: box-shadow 0.3s ease;
 
   // TODO: Hover state of the button and Email Input Field.
+  &:hover,
+  &:focus-visible {
+    outline: 0;
+    background: linear-gradient(to right, #ff5574, var(--clr-primary));
+    box-shadow: 0px 10px 30px -10px tomato;
+  }
 }
 
 [aria-hidden="true"] {

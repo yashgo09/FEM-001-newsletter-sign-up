@@ -25,6 +25,9 @@
 
   .label-wrapper {
     margin-block-end: 0.4rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
   }
 
   label {
@@ -39,6 +42,20 @@
     width: 100%;
     border: 1px solid var(--clr-neutral-500);
     border-radius: 6px;
+  }
+
+  &--invalid {
+    input[type="email"] {
+      border: 2px solid var(--clr-primary);
+      background-color: #ffe8e6;
+      color: var(--clr-primary);
+
+      &:hover,
+      &:focus {
+        outline: 0;
+        border: 2px solid var(--clr-primary);
+      }
+    }
   }
 }
 
@@ -59,4 +76,14 @@
   .image__desktop {
     display: block;
   }
+}
+
+// On Thank You Page
+
+.thankyou-message {
+  margin-block-start: 0.5em;
+}
+
+.thankyou-text {
+  margin-block: 2em;
 }

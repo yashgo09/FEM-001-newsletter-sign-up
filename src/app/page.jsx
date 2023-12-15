@@ -1,10 +1,17 @@
 import Image from "next/image";
 import illustrationImg from "../../public/illustration-sign-up-mobile.svg";
 import illustrationImgDesktop from "../../public/illustration-sign-up-desktop.svg";
+import EmailForm from "./EmailForm";
+
+export const metadata = {
+  title: "Newsletter Sign Up",
+  description:
+    "Subscribe to our newsletter to get latest information about us and stay connected to us. It just takes a few minutes.",
+};
 
 export default function Page() {
   return (
-    <main>
+    <main className="main main--newsletter">
       <div className="image">
         <Image className="image__mobile" src={illustrationImg} alt="Sign Up Illustration" />
         <Image className="image__desktop" src={illustrationImgDesktop} alt="Sign Up Illustration" />
@@ -17,18 +24,7 @@ export default function Page() {
           <li className="benefits__item">Measuring to ensure updates are a success</li>
           <li className="benefits__item">And much more!</li>
         </ul>
-        <div className="email-input">
-          <div className="label-wrapper">
-            <label htmlFor="email">Email address</label>
-            <em className="error" aria-hidden="true">
-              Valid email required
-            </em>
-          </div>
-          <input type="email" name="email" id="email" placeholder="email@company.com" />
-        </div>
-        <button className="btn" type="submit">
-          Subscribe to monthly newsletter
-        </button>
+        <EmailForm />
       </div>
     </main>
 
